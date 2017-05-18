@@ -12,6 +12,13 @@ myBot = Bot(command_prefix="!")
 def on_read():
     print("Client logged in")
 
+@myBot.event
+@asyncio.coroutine
+def on_message(message):
+    if ("hello" in message.content or "hi" in message.content or "hey" in message.content or "hola" in message.content):
+        yield from myBot.send_message(message.channel, "Hello, Hello?")
+    yield from myBot.process_commands(message)
+
 @myBot.command()
 @asyncio.coroutine
 def hello(*args):
