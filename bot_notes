@@ -1,0 +1,11 @@
+-Bot Functionality
+    -First, bot reads in a message from the specific bot channel
+
+        -If the message contains a question / words that pertain to a question that in can answer with it's current data,
+        then send a message answering the question
+
+        -If there is not enough data, send the question as a private message to the administration question channel
+
+            -The question is answered by an administrator, and then that answer / question is put into the bot database
+            (initially manual, may add automatic functionality at a later time)
+
